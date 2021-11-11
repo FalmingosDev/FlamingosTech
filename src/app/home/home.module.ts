@@ -29,6 +29,10 @@ import { GetStarttedComponent } from './get-startted/get-startted.component';
     CommonModule,
     HomeRoutingModule,
     SlickCarouselModule
+  ],
+  exports:[
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class HomeModule { }
