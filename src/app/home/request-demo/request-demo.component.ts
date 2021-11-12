@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 import { ValueTransformer } from '@angular/compiler/src/util';
+import { ApiService } from 'src/app/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-request-demo',
@@ -15,26 +17,34 @@ export class RequestDemoComponent implements OnInit {
   fourthBol: boolean = false;
   fifthBol: boolean = false;
   sixthBol: boolean = false;
-  sevBol: boolean = false;
+  sevBol: boolean = false; 
   eightBol: boolean = false;
   nineBol: boolean = false;
   FirstBox: Array<any> = [
-    { name: 'I want to drive more leads' },
-    { name: 'I want to earn more online sales' },
-    { name: 'I want to improve my ROI' }
+    { name: 'I want to drive more leads',value:1 },
+    { name: 'I want to earn more online sales',value:2 },
+    { name: 'I want to improve my ROI',value:3 }
   ];
   SecBox: Array<any> = [
-    { name: 'SEO' },
-    { name: 'PPC advertising' },
-    { name: 'Social media' },
-    { name: 'Marketplaces (Amazon, Walmart, etc.)' }
+    { name: 'SEO',value:1 },
+    { name: 'PPC advertising',value:2 },
+    { name: 'Social media',value:3 },
+    { name: 'Marketplaces (Amazon, Walmart, etc.)',value:4 }
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router) {
     this.form = this.fb.group({
       checkFirstArray: this.fb.array([]),
+      checkFirstOther: null,
       checkSecArray: this.fb.array([]),
-      checkThridArray: null
+      checkSecOther: null,
+      checkThridbox: null,
+      checkFourthbox: null,
+      checkFifthbox: null,
+      checkSixbox: null,
+      checkSevenbox: null,
+      checkEightbox: null,
+      checkNinebox: null
     })
   }
   ngOnInit(): void {
@@ -61,11 +71,10 @@ export class RequestDemoComponent implements OnInit {
   }
 
   firstOther(e) {
-    console.log("other triggred")
-    const checkFirstArray: FormArray = this.form.get('checkFirstArray') as FormArray;
     if (e.target.value) {
-      checkFirstArray.push(new FormControl(e.target.value));
-      console.log(this.form.value.checkFirstArray)
+      this.form.value.checkFirstOther=e.target.value;
+      console.log(this.form.value)
+
     }
   }
 
@@ -85,10 +94,11 @@ export class RequestDemoComponent implements OnInit {
 
   //2nd box
   onSecCheckboxChange(e) {
+    console.log(this.form.value)
     const checkSecArray: FormArray = this.form.get('checkSecArray') as FormArray;
-
+  
     if (e.target.checked) {
-      checkSecArray.push(new FormControl(e.target.value));
+      this.form.value.checkSecArray.push(e.target.value);
     } else {
       let i: number = 0;
       checkSecArray.controls.forEach((item: FormControl) => {
@@ -100,13 +110,11 @@ export class RequestDemoComponent implements OnInit {
       });
     }
 
-    console.log(this.form.value.checkSecArray)
+    console.log(this.form.value)
   }
   secOther(e) {
-    const checkSecArray: FormArray = this.form.get('checkSecArray') as FormArray;
     if (e.target.value) {
-      checkSecArray.push(new FormControl(e.target.value));
-      console.log(this.form.value.checkSecArray)
+      this.form.value.checkSecOther=e.target.value;
     }
   }
   side_prev_2(): void {
@@ -120,12 +128,12 @@ export class RequestDemoComponent implements OnInit {
     }
     this.secBol = false;
     this.thridBol = true;
+    console.log(this.form.value)
   }
 
   //3rd box
   onThridBox(e){
-    this.form.value.checkThridArray=e.target.value;
-    console.log(this.form.value.checkThridArray)
+    this.form.value.checkThridbox=e.target.value;
     console.log(this.form.value)
   }
   side_prev_3(): void {
@@ -133,12 +141,13 @@ export class RequestDemoComponent implements OnInit {
     this.thridBol = false;
   }
   side_next_3(): void {
-    if(this.form.value.checkThridArray==null){
+    if(this.form.value.checkThridbox==null){
       alert("At least choose one field");
       return;
     }
     this.thridBol = false;
     this.fourthBol = true;
+    console.log(this.form.value)
   }
 
   //4th box
@@ -146,9 +155,16 @@ export class RequestDemoComponent implements OnInit {
     this.fourthBol = false;
     this.thridBol = true;
   }
-  side_next_4(): void {
+  side_next_4() {
+    const inputElement = (<HTMLInputElement>document.getElementById("fourth_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkFourthbox=inputElement;
     this.fourthBol = false;
     this.fifthBol = true;
+    console.log(this.form.value)
   }
 
   //5th box
@@ -157,8 +173,15 @@ export class RequestDemoComponent implements OnInit {
     this.fourthBol = true;
   }
   side_next_5(): void {
+    const inputElement = (<HTMLInputElement>document.getElementById("fifth_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkFifthbox=inputElement;
     this.fifthBol = false;
     this.sixthBol = true;
+    console.log(this.form.value)
   }
 
   //6th box
@@ -167,8 +190,16 @@ export class RequestDemoComponent implements OnInit {
     this.fifthBol = true;
   }
   side_next_6(): void {
+    const inputElement = (<HTMLInputElement>document.getElementById("six_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkSixbox=inputElement;
+    //six_box
     this.sixthBol = false;
     this.sevBol = true;
+    console.log(this.form.value)
   }
 
 
@@ -177,9 +208,17 @@ export class RequestDemoComponent implements OnInit {
     this.sevBol = false;
     this.sixthBol = true;
   }
-  side_next_7(): void {
+  side_next_7() {
+   
+    const inputElement = (<HTMLInputElement>document.getElementById("seven_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkSevenbox=inputElement;
     this.sevBol = false;
     this.eightBol = true;
+    console.log(this.form.value)
   }
 
 
@@ -190,6 +229,14 @@ export class RequestDemoComponent implements OnInit {
 
   }
   side_next_8(): void {
+    console.log(this.form.value)
+    const inputElement = (<HTMLInputElement>document.getElementById("eight_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkEightbox=inputElement;
+    console.log(this.form.value)
     this.eightBol = false;
     this.nineBol = true;
   }
@@ -200,5 +247,20 @@ export class RequestDemoComponent implements OnInit {
     this.nineBol = false;
     this.eightBol = true;
   }
-
+  onSubmit(e){
+    console.log(this.form.value)
+    e.preventDefault();
+    const inputElement = (<HTMLInputElement>document.getElementById("nine_box")).value;
+    if(inputElement==""){
+      alert("field is required");
+      return;
+    }
+    this.form.value.checkNinebox=inputElement;
+    this.dataService.onRequestdemoSubmit(this.form.value).subscribe((res)=>{
+      if(res.success){
+        alert(res.msg);
+        this.router.navigate(['/']);
+      }
+    });
+  }
 }
