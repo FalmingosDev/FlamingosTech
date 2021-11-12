@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <form>
+                <form [formGroup]="form" novalidate>
                     <div class="rq-div">
 
 
@@ -12,11 +12,33 @@
                             <h3>What do you want to accomplish, revenue driver?<span>Select one or more goals.</span>
                             </h3>
                             <div class="row_div">
-                                
+                                <div class="div_check-1 div-check-100">
+                                    <div *ngFor="let data of FirstBox; let i=index">
+                                        <div class="form-check form-ch-bt">
+                                            <label>
+                                                <input type="checkbox" class="form-check-input" [value]="data.name"
+                                                    (change)="onFirstCheckboxChange($event)" />
+                                                {{data.name}}
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="div_check-2 div-check-100">
+                                    <div class="form-check form-ch-bt">
+                                        <label class="form-check-label" for="check4">
+                                            <input type="checkbox" class="form-check-input" id="check4" name="option4" />
+                                            <input type="text" placeholder="Other" class="oth-input"
+                                                (blur)="firstOther($event)">
+                                        </label>
+                                    </div>
+                                </div>
+
                             </div>
 
-                            <!-- <div class="row_div">
 
+                            <!-- <div class="row_div">
                                 <div class="div_check-1">
                                     <div class="form-check">
                                         <label class="form-check-label" for="check1">
@@ -54,7 +76,17 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
+
+                            <!-- <div *ngFor="let data of Data; let i=index">
+                                <label>
+                                    <input type="checkbox" [value]="data.value" (change)="onCheckboxChange($event)" />
+                                    {{data.name}}
+                                </label>
+                            </div> -->
+
+
                             <div class="step-button">
                                 <div class="stp-btn-1">
                                     &nbsp;
@@ -66,7 +98,7 @@
                                     <button type="button" class="prv-ne-btn" (click)="side_next($event)">Next<i
                                             class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
                                 </div>
-                            </div> -->
+                            </div>
 
 
 
@@ -81,271 +113,269 @@
                         <div class="re-dm-step-2" id="scand_side" *ngIf="secBol">
                             <h3>What strategies are you hoping to use to support your goals?<span
                                     class="star-span">*</span></h3>
-                            <div class="re-sm-stp">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="scand_check_1">
-                                        <input type="checkbox" class="form-check-input" id="scand_check_1"
-                                            name="scand_option_1" value="something">SEO
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="re-sm-stp">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="scand_check_2">
-                                        <input type="checkbox" class="form-check-input" id="scand_check_2"
-                                            name="scand_option_1" value="something">PPC advertising
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="re-sm-stp">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="scand_check_3">
-                                        <input type="checkbox" class="form-check-input" id="scand_check_3"
-                                            name="scand_option_1" value="something">Social media
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="re-sm-stp">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="scand_check_4">
-                                        <input type="checkbox" class="form-check-input" id="scand_check_4"
-                                            name="scand_option_1" value="something">Marketplaces (Amazon, Walmart, etc.)
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="re-sm-stp">
-                                <div class="form-check">
-                                    <label class="form-check-label" for="scand_check_5">
-                                        <input type="checkbox" class="form-check-input" id="scand_check_5"
-                                            name="scand_option_1" value="something">
-                                        <input type="text" placeholder="Other" class="oth-input">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_2()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
-                                    </div>
-                                </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next2()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end sec box -->
 
-
-                        <!-- thrid box -->
-                        <div class="re-dm-step-3" id="third_side" *ngIf="thridBol">
-                            <h3>Have you worked with an agency before?<span class="star-span">*</span></h3>
                             <div class="row_div">
-                                <div class="div_check-1">
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="check1">
-                                            <input type="radio" class="form-check-input" id="rd-sm-1" name="rd-sm"
-                                                value="something" checked>Yes
+                                <div class="div_check-1 div-check-100">
+                                    <div *ngFor="let data of SecBox; let i=index">
+                                        <div class="form-check form-ch-bt">
+                                            <label>
+                                                <input type="checkbox" class="form-check-input" [value]="data.name"
+                                                    (change)="onSecCheckboxChange($event)" />
+                                                {{data.name}}
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="div_check-2 div-check-100">
+                                    <div class="form-check form-ch-bt">
+                                        <label class="form-check-label" for="check4">
+                                            <input type="checkbox" class="form-check-input" id="check4" name="option4">
+                                            <input type="text" placeholder="Other" class="oth-input"
+                                                (blur)="secOther($event)">
                                         </label>
                                     </div>
                                 </div>
-                                <div class="div_check-2">
-                                    <div class="form-check">
-                                        <label class="form-check-label" for="check2">
-                                            <input type="radio" class="form-check-input" id="rd-sm-2" name="rd-sm"
-                                                value="something">No
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_3()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
-                                    </div>
-                                </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_3()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end thrid box -->
-                        
-                        <!-- four box -->
-                        <div class="re-dm-step-4" id="forth_side" *ngIf="fourthBol">
-                            <h3>Is there anything specific we should know about your project?<span>Background,
-                                    requirements, budget, deadline, etc.</span></h3>
-                            <div class="re-sm-stp">
-                                <textarea class="form-textarea" placeholder="Type here..."></textarea>
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_4()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
-                                    </div>
-                                </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_4()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end four box -->
 
 
-                        <!-- fifth box -->
-                        <div class="re-dm-step-5" id="fifth_side" *ngIf="fifthBol">
-                            <h3>Who are we preparing the proposal for?<span class="star-span">*</span><span>Enter your
-                                    company's name</span></h3>
-                            <div class="re-sm-stp">
-                                <input type="text" class="input-cl" placeholder="Type here...">
                             </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_5()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_2()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next2()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_5()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
                             </div>
-                        </div>
-                        <!-- end fifth box -->
+                            <!-- end sec box -->
 
-                        <!-- sixth box -->
-                        <div class="re-dm-step-6" id="sixth_side" *ngIf="sixthBol">
-                            <h3>Who should we address the proposal to?<span class="star-span">*</span><span>Enter your
-                                    name.</span></h3>
-                            <div class="re-sm-stp">
-                                <input type="text" class="input-cl" placeholder="Type here...">
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_6()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
-                                    </div>
-                                </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_6()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end sixth box -->
 
-                        <!-- seven box  -->
-                        <div class="re-dm-step-7" id="seven_side" *ngIf="sevBol">
-                            <h3>Where can we find your company online?<span class="star-span">*</span><span>Enter your
-                                    company's website URL.</span></h3>
-                            <div class="re-sm-stp">
-                                <input type="text" class="input-cl" placeholder="Type here...">
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_7()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
+                            <!-- thrid box -->
+                            <div class="re-dm-step-3" id="third_side" *ngIf="thridBol">
+                                <h3>Have you worked with an agency before?<span class="star-span">*</span></h3>
+                                <div class="row_div">
+                                    <div class="div_check-1">
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="check1">
+                                                <input type="radio" class="form-check-input" id="rd-sm-1" name="rd-sm"
+                                                value="yes" checked  (click)="onThridBox($event)">Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="div_check-2">
+                                        <div class="form-check">
+                                            <label class="form-check-label" for="check2">
+                                                <input type="radio" class="form-check-input" id="rd-sm-2" name="rd-sm"
+                                                   value="no" (click)="onThridBox($event)">No
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_7()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end seven box -->
 
-                        <!-- eigth box -->
-                        <div class="re-dm-step-8" id="eight_side" *ngIf="eightBol">
-                            <h3>Where can our strategist email information about your proposal?<span
-                                    class="star-span">*</span><span>Enter your work email address.</span></h3>
-                            <div class="re-sm-stp">
-                                <input type="text" class="input-cl" placeholder="Type here...">
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_8()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
-                                </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_3()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_3()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                                <div class="stp-btn-3">
-                                    <button type="button" class="prv-ne-btn" (click)="side_next_8()">Next<i
-                                            class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
-                                </div>
                             </div>
-                        </div>
-                        <!-- end eigth box -->
+                            <!-- end thrid box -->
 
-                        <!-- nine box -->
-                        <div class="re-dm-step-9" id="nine_side" *ngIf="nineBol">
-                            <h3>How can we reach you if we have questions?<span class="star-span">*</span><span>Enter
-                                    your phone number.</span></h3>
-                            <div class="re-sm-stp">
-                                <input type="text" class="input-cl" placeholder="Type here...">
-                            </div>
-                            <div class="step-button">
-                                <div class="stp-btn-1">
-                                    <button type="button" class="prv-ne-btn" (click)="side_prev_9()"><i
-                                            class="fa fa-long-arrow-left left-arrow"
-                                            aria-hidden="true"></i>Prev</button>
+                            <!-- four box -->
+                            <div class="re-dm-step-4" id="forth_side" *ngIf="fourthBol">
+                                <h3>Is there anything specific we should know about your project?<span>Background,
+                                        requirements, budget, deadline, etc.</span></h3>
+                                <div class="re-sm-stp">
+                                    <textarea class="form-textarea" placeholder="Type here..."></textarea>
                                 </div>
-                                <div class="stp-btn-2">
-                                    <div class="error-message">
-                                        This field is required.
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_4()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_4()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                                <div class="stp-btn-3">
-                                    <button type="submit" class="prv-ne-btn">Submit</button>
+                            </div>
+                            <!-- end four box -->
+
+
+                            <!-- fifth box -->
+                            <div class="re-dm-step-5" id="fifth_side" *ngIf="fifthBol">
+                                <h3>Who are we preparing the proposal for?<span class="star-span">*</span><span>Enter
+                                        your
+                                        company's name</span></h3>
+                                <div class="re-sm-stp">
+                                    <input type="text" class="input-cl" placeholder="Type here...">
+                                </div>
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_5()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_5()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                         
-                        </div>
-                        <!-- end nine box  -->
-                        <!--<div class="re-dm-step-10" id="ten_side" style="display: none;">
+                            <!-- end fifth box -->
+
+                            <!-- sixth box -->
+                            <div class="re-dm-step-6" id="sixth_side" *ngIf="sixthBol">
+                                <h3>Who should we address the proposal to?<span class="star-span">*</span><span>Enter
+                                        your
+                                        name.</span></h3>
+                                <div class="re-sm-stp">
+                                    <input type="text" class="input-cl" placeholder="Type here...">
+                                </div>
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_6()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_6()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end sixth box -->
+
+                            <!-- seven box  -->
+                            <div class="re-dm-step-7" id="seven_side" *ngIf="sevBol">
+                                <h3>Where can we find your company online?<span class="star-span">*</span><span>Enter
+                                        your
+                                        company's website URL.</span></h3>
+                                <div class="re-sm-stp">
+                                    <input type="text" class="input-cl" placeholder="Type here...">
+                                </div>
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_7()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_7()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end seven box -->
+
+                            <!-- eigth box -->
+                            <div class="re-dm-step-8" id="eight_side" *ngIf="eightBol">
+                                <h3>Where can our strategist email information about your proposal?<span
+                                        class="star-span">*</span><span>Enter your work email address.</span></h3>
+                                <div class="re-sm-stp">
+                                    <input type="text" class="input-cl" placeholder="Type here...">
+                                </div>
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_8()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="button" class="prv-ne-btn" (click)="side_next_8()">Next<i
+                                                class="fa fa-long-arrow-right right-arrow"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end eigth box -->
+
+                            <!-- nine box -->
+                            <div class="re-dm-step-9" id="nine_side" *ngIf="nineBol">
+                                <h3>How can we reach you if we have questions?<span
+                                        class="star-span">*</span><span>Enter
+                                        your phone number.</span></h3>
+                                <div class="re-sm-stp">
+                                    <input type="text" class="input-cl" placeholder="Type here...">
+                                </div>
+                                <div class="step-button">
+                                    <div class="stp-btn-1">
+                                        <button type="button" class="prv-ne-btn" (click)="side_prev_9()"><i
+                                                class="fa fa-long-arrow-left left-arrow"
+                                                aria-hidden="true"></i>Prev</button>
+                                    </div>
+                                    <div class="stp-btn-2">
+                                        <div class="error-message">
+                                            This field is required.
+                                        </div>
+                                    </div>
+                                    <div class="stp-btn-3">
+                                        <button type="submit" class="prv-ne-btn">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- end nine box  -->
+                            <!--<div class="re-dm-step-10" id="ten_side" style="display: none;">
                         <h2>step-10</h2>
                         <div class="step-button">
                             <button type="button" class="prv-ne-btn" onclick="side_prev_9()">Prev</button>
                             <button type="button" class="prv-ne-btn" onclick="side_next10()">Next</button> 
                         </div>  
                     </div>-->
-                    </div>
+                        </div>
                 </form>
             </div>
         </div>

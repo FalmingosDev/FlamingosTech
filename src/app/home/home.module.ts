@@ -11,6 +11,7 @@ import { ProductsComponent } from './products/products.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { RequestDemoComponent } from './request-demo/request-demo.component';
 import { GetStarttedComponent } from './get-startted/get-startted.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import { GetStarttedComponent } from './get-startted/get-startted.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
     HeaderComponent,
