@@ -9,4 +9,8 @@ export class ApiService {
   onRequestdemoSubmit(form){
     return this.httpClient.post<any>(this.baseUrl + '/request_demo.php', form); 
   }
+
+  fetch_req_demo(){
+    return this.httpClient.get<any>(this.baseUrl + '/fetch_request_demo.php'); 
+  }
 }

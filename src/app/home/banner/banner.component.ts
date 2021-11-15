@@ -46,7 +46,7 @@ export class BannerComponent implements OnInit {
                   </div> -->
 
 
-  */
+  */ 
   slickInit(e) {
     console.log('slick initialized');
   }
@@ -55,13 +55,7 @@ export class BannerComponent implements OnInit {
     console.log('breakpoint');
   }
 
-  afterChange(e: any) {
-    console.log('afterChange');
-  }
-
-  beforeChange(e: any) {
-    console.log('beforeChange');
-  }
+ 
 
   constructor() { }
 
