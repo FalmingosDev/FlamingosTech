@@ -19,49 +19,13 @@ export class BannerComponent implements OnInit {
     { img: "assets/images/banner_bg2.jpg" },
     { img: "assets/images/banner_bg3.jpg" }
   ];
-
   slidetext = [
     { text: `Cloud based custom <span>ERP & CRM</span> Application` },
     { text: `<span>E-Commerce</span> Application` },
     { text: `<span>Android & iOS</span> Mobile App` },
     { text: `<span>Responsive</span> Website with CMS` },
     { text: `<span>Digital</span> Marketing` },
-  ]
-  // slidetext = [
-  //   { text: `Cloud based custom <span>ERP & CRM</span> Application` },
-  //   { text: `<span>E-Commerce</span> Application` },
-  //   { text: `<span>Android & iOS</span> Mobile App` },
-  //   { text: `<span>Responsive</span> Website with CMS` },
-  //   { text: `<span>Digital</span> Marketing` },
-  // ]
-
-  /*
-
-                    <!-- <div class="text-slide">
-                      <li><p>Cloud based custom <span>ERP & CRM</span> Application</p></li>
-                      <li><p><span>E-Commerce</span> Application</p></li>
-                      <li><p><span>Android & iOS</span> Mobile App</p></li>
-                      <li><p><span>Responsive</span> Website with CMS</p></li>
-                      <li><p><span>Digital</span> Marketing</p></li>
-                  </div> -->
-
-
-  */
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-
-  afterChange(e: any) {
-    console.log('afterChange');
-  }
-
-  beforeChange(e: any) {
-    console.log('beforeChange');
-  }
+  ];
 
   constructor() { }
 

@@ -10,7 +10,8 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
-
+import { NotFoundComponent } from './not-found/not-found.component';
+ 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'demo', component: RequestDemoComponent },
@@ -21,7 +22,9 @@ const routes: Routes = [
   { path: 'services', component: OurServicesComponent },
   { path: 'projects', component: OurProjectsComponent },
   { path: 'clients', component: OurClientsComponent },
-  { path: 'contact-us', component: ContactUsComponent }
+  { path: 'contact-us', component: ContactUsComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  { path:'**',redirectTo:'/not-found'}
 ];
 
 @NgModule({

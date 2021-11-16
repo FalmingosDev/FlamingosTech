@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -18,7 +19,8 @@ import { SolutionModule } from './solution/solution.module';
     HomeModule,
     ProductsModule,
     SolutionModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

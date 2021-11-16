@@ -13,7 +13,7 @@ import { MarketSurveyComponent } from './market-survey/market-survey.component';
 import { FleetManageComponent } from './fleet-manage/fleet-manage.component';
 import { TurnkeyProjectsComponent } from './turnkey-projects/turnkey-projects.component';
 
-
+ 
 
 const routes: Routes = [
   { path: 'out-of-home', component: OohComponent },

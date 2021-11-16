@@ -19,6 +19,8 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -38,13 +40,16 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     OurServicesComponent,
     OurProjectsComponent,
     OurClientsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    NotFoundComponent
     
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[
 	HeaderComponent,
