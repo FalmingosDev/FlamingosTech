@@ -11,6 +11,14 @@ import { ProductsComponent } from './products/products.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { RequestDemoComponent } from './request-demo/request-demo.component';
 import { GetStarttedComponent } from './get-startted/get-startted.component';
+import { WhyUsComponent } from './why-us/why-us.component';
+import { OurTeamComponent } from './our-team/our-team.component';
+import { CareersComponent } from './careers/careers.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { OurServicesComponent } from './our-services/our-services.component';
+import { OurProjectsComponent } from './our-projects/our-projects.component';
+import { OurClientsComponent } from './our-clients/our-clients.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -22,13 +30,26 @@ import { GetStarttedComponent } from './get-startted/get-startted.component';
     SolutionsComponent,
     ProductsComponent,
     RequestDemoComponent,
-    GetStarttedComponent
+    GetStarttedComponent,
+    WhyUsComponent,
+    OurTeamComponent,
+    CareersComponent,
+    AboutUsComponent,
+    OurServicesComponent,
+    OurProjectsComponent,
+    OurClientsComponent,
+    ContactUsComponent
     
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SlickCarouselModule
+  ],
+  exports:[
+	HeaderComponent,
+	FooterComponent,
+  GetStarttedComponent
   ]
 })
 export class HomeModule { }
