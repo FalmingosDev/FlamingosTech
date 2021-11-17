@@ -560,7 +560,7 @@ a:hover{
     height: 32px;
     border-radius: 100%;
     border: 1px solid #ccc;
-    line-height: 26px;
+    line-height: 34px;
     text-align: center;
     transition: all .5s ease;
 } 
@@ -615,7 +615,7 @@ a:hover{
     background: #009fb5;
     display: inline-block;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     color: #fff;
 }
 .rating-ul p{
@@ -730,9 +730,10 @@ a:hover{
 .stp-btn-2{
     width: 30%;
     float: left;
+    display: none;
 }
 .stp-btn-3{
-    width: 35%;
+    width: 65%;
     float: left;
     text-align: right;
 }

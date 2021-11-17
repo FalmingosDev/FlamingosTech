@@ -35,7 +35,7 @@ import { TurnkeyProjectsComponent } from './turnkey-projects/turnkey-projects.co
   imports: [
     CommonModule,
     ProductsRoutingModule,
-	HomeModule
+  	HomeModule
   ]
 })
 export class ProductsModule { }

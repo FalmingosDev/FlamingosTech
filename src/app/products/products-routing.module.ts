@@ -13,11 +13,9 @@ import { MarketSurveyComponent } from './market-survey/market-survey.component';
 import { FleetManageComponent } from './fleet-manage/fleet-manage.component';
 import { TurnkeyProjectsComponent } from './turnkey-projects/turnkey-projects.component';
 
- 
-
 const routes: Routes = [
   { path: 'out-of-home', component: OohComponent },
-  { path: 'ecom-manage', component: EcomManageComponent },
+  { path: 'ecom-manage', component: EcomManageComponent }, 
   { path: 'st-retail', component: StRetailComponent },
   { path: 'retail-chain', component: RetailChainComponent },
   { path: 'rms', component: RmsComponent },

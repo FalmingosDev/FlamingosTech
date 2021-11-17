@@ -26,10 +26,10 @@ export class RequestDemoComponent implements OnInit {
   
   FirstBox: Array<any> = [];
   SecBox: Array<any> = [
-    { name: 'SEO',value:1 },
-    { name: 'PPC advertising',value:2 },
-    { name: 'Social media',value:3 },
-    { name: 'Marketplaces (Amazon, Walmart, etc.)',value:4 }
+    // { name: 'SEO',value:1 },
+    // { name: 'PPC advertising',value:2 },
+    // { name: 'Social media',value:3 },
+    // { name: 'Marketplaces (Amazon, Walmart, etc.)',value:4 }
   ];
 
   constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router) {

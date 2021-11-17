@@ -20,7 +20,8 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NotFoundComponent } from './not-found/not-found.component';
+
+
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     OurProjectsComponent,
     OurClientsComponent,
     ContactUsComponent,
-    NotFoundComponent
+
+    
     
   ],
   imports: [
@@ -54,7 +56,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
   exports:[
 	HeaderComponent,
 	FooterComponent,
-  GetStarttedComponent
+  GetStarttedComponent,
   ]
 })
 export class HomeModule { }
