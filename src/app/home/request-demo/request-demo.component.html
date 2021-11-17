@@ -5,8 +5,6 @@
             <div class="col-md-12">
                 <form [formGroup]="form" novalidate>
                     <div class="rq-div">
-
-
                         <!-- first box -->
                         <div class="re-dm-step-1" id="first_side"  [style.display]="firstBol ? 'block' : 'none'">
                             <h3>What do you want to accomplish, revenue driver?<span>Select one or more goals.</span>
@@ -37,7 +35,6 @@
                                 </div>
 
                             </div>
-
                             <div class="step-button">
                                 <div class="stp-btn-1">
                                     &nbsp;
@@ -50,16 +47,8 @@
                                             class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
                                 </div>
                             </div>
-
-
-
-
                         </div>
                         <!-- first box  -->
-
-
-                  
-
                         <!-- sec box  -->
                         <div class="re-dm-step-2" id="sec_side"  [style.display]="secBol ? 'block' : 'none'">
                             <h3>What strategies are you hoping to use to support your goals?<span
@@ -225,8 +214,7 @@
                                     <button type="button" class="prv-ne-btn" (click)="side_prev_7()"><i
                                             class="fa fa-long-arrow-left left-arrow"
                                             aria-hidden="true"></i>Prev</button>
-                                </div>
-                                
+                                </div>                               
                                 <div class="stp-btn-3">
                                     <button type="button" class="prv-ne-btn" (click)="side_next_7()">Next<i
                                             class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
@@ -248,7 +236,6 @@
                                             class="fa fa-long-arrow-left left-arrow"
                                             aria-hidden="true"></i>Prev</button>
                                 </div>
-                               
                                 <div class="stp-btn-3">
                                     <button type="button" class="prv-ne-btn" (click)="side_next_8()">Next<i
                                             class="fa fa-long-arrow-right right-arrow" aria-hidden="true"></i></button>
@@ -275,10 +262,8 @@
                                     <button type="submit" class="prv-ne-btn" (click)="onSubmit($event)">Submit</button>
                                 </div>
                             </div>
-
                         </div>
                         <!-- end nine box  -->
-                        
                         <div class="row" *ngIf="errorBol">
                             <div class="offset-md-4 col-md-4">
                                 <div class="error-message mt-2">
@@ -293,6 +278,4 @@
         </div>
     </div>
 </section>
-
-
 <app-footer></app-footer>
