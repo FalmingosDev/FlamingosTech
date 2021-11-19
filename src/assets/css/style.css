@@ -11,15 +11,23 @@ body{
     font-weight: 200;
     font-style: normal;
 }
-
+:focus-visible{
+    border: none;
+}
 a:hover{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .desktop-device{
     display: block;
 }
 .mobile-device{
     display: none;
+}
+.form-check {
+    position: relative;
+    display: block;
+    /* padding-left: 1.25rem; */
+    padding-left: 33px !important;
 }
 /******************header****************/
 .header{
@@ -560,7 +568,7 @@ a:hover{
     height: 32px;
     border-radius: 100%;
     border: 1px solid #ccc;
-    line-height: 34px;
+    line-height: 27px;
     text-align: center;
     transition: all .5s ease;
 } 
