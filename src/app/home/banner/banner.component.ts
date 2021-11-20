@@ -17,10 +17,14 @@ export class BannerComponent implements OnInit {
   slideImg = [
     { img: "assets/images/banner_bg1.jpg" },
     { img: "assets/images/banner_bg2.jpg" },
-    { img: "assets/images/banner_bg3.jpg" }
+    { img: "assets/images/banner_bg3.jpg" },
+    { img: "assets/images/banner_bg4.jpg" },
+    { img: "assets/images/banner_bg5.jpg" },
+    { img: "assets/images/banner_bg6.jpg" }
   ];
   slidetext = [
     { text: `Cloud based custom <span>ERP & CRM</span> Application` },
+    { text: `<span>Data</span> Management` },
     { text: `<span>E-Commerce</span> Application` },
     { text: `<span>Android & iOS</span> Mobile App` },
     { text: `<span>Responsive</span> Website with CMS` },

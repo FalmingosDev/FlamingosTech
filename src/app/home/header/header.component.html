@@ -17,10 +17,10 @@
                 </div>
                 <div class="menu-div" id="cssmenu">
               <ul>
-                 <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-                 <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
-                 <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
-                 <li><a href="javascript:void(0);">Solution <i class="fa fa-angle-down"></i></a>
+                 <li ><a routerLink="/" >Home</a></li>
+                 <li [routerLinkActive]="['active']"><a routerLink="/about" >About Us</a></li>
+                 <li [routerLinkActive]="['active']"><a routerLink="/services" >Services</a></li>
+                 <li [routerLinkActive]="['active']"><a href="javascript:void(0);">Solution <i class="fa fa-angle-down"></i></a>
                   <ul>
                     <li><a routerLink="/cloud" routerLinkActive="active">Cloud based custom ERP & CRM Application</a></li>
                     <li><a routerLink="/ecommerce" routerLinkActive="active">E-Commerce Application</a></li>
