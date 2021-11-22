@@ -64,7 +64,7 @@ a:hover{
     letter-spacing: 1px;
     padding-left: 17px;
 }
-.logo a {
+.logo {
     position: relative;
 }
 .contact-btn{
@@ -847,6 +847,12 @@ a:hover{
 }
 }
 @media(max-width :767px){
+    .rq-div {
+        width: 100%;
+    }
+    .rq-demo {
+        margin-top: 15px;
+    }
     .desktop-device{
     display: none;
 }

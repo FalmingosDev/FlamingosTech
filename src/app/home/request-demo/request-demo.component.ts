@@ -67,26 +67,19 @@ export class RequestDemoComponent implements OnInit {
       });
     }
   }
+  firstOtherClick(){
+    if(!(<HTMLFormElement>document.getElementById('check4')).checked){
+      (<HTMLFormElement>document.getElementById('firstOtherText')).value = null;
+      this.form.value.checkFirstOther=null;
+      return;
+    }
+  }
 
   firstOther(e) {
     if (e.target.value) {
         this.a_firstOther=e.target.value;
         this.form.value.checkFirstOther=this.a_firstOther;
     }
-
-    /*const checkFirstOther: FormArray = this.form.get('checkFirstOther') as FormArray;
-    if (e.target.checked) {
-      checkFirstOther.push(new FormControl(e.target.value));
-    } else {
-      let i: number = 0;
-      checkFirstOther.controls.forEach((item: FormControl) => {
-        if (item.value == e.target.value) {
-          checkFirstOther.removeAt(i);
-          return;
-        }
-        i++;
-      });
-    }*/
   }
 
   side_next(e: any) {
@@ -133,6 +126,13 @@ export class RequestDemoComponent implements OnInit {
       });
     }
     this.form.value.checkFirstOther=this.a_firstOther;
+  }
+  secOtherClick(){
+    if(!(<HTMLFormElement>document.getElementById('check5')).checked){
+      (<HTMLFormElement>document.getElementById('secOtherText')).value = null;
+      this.form.value.checkSecOther=null;
+      return;
+    }
   }
   secOther(e) {
     if (e.target.value) {
@@ -281,6 +281,6 @@ export class RequestDemoComponent implements OnInit {
         alert(res.msg);
         this.router.navigate(['/']);
       }
-    });
+    }); 
   }
 }

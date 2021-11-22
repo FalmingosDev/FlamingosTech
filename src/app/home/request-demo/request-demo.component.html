@@ -27,8 +27,8 @@
                                     <div class="form-check form-ch-bt">
                                         <label class="form-check-label" for="check4">
                                             <input type="checkbox" class="form-check-input" id="check4"
-                                                name="option4" />
-                                            <input type="text" placeholder="Other" class="oth-input"
+                                                name="option4" (change)="firstOtherClick()" />
+                                            <input type="text" placeholder="Other" class="oth-input" id="firstOtherText"
                                                 (blur)="firstOther($event)"> 
                                         </label>
                                     </div>
@@ -71,8 +71,9 @@
                                 <div class="div_check-2 div-check-100">
                                     <div class="form-check form-ch-bt">
                                         <label class="form-check-label" for="check4">
-                                            <input type="checkbox" class="form-check-input" id="check4" name="option4">
-                                            <input type="text" placeholder="Other" class="oth-input"
+                                            <input type="checkbox" class="form-check-input" id="check5" name="option4"
+                                            (change)="secOtherClick()">
+                                            <input type="text" placeholder="Other" class="oth-input" id="secOtherText"
                                                 (blur)="secOther($event)">
                                         </label>
                                     </div>
