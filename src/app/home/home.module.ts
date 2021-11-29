@@ -24,6 +24,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlertModule } from 'ngx-alerts';
 import { BrowserModule } from '@angular/platform-browser';
+import { CookiePageComponent } from './cookie-page/cookie-page.component';
+import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { BrowserModule } from '@angular/platform-browser';
     OurServicesComponent,
     OurProjectsComponent,
     OurClientsComponent,
-    ContactUsComponent, 
+    ContactUsComponent,
+    CookiePageComponent,
+    PrivacyPageComponent, 
   ],
   imports: [
     CommonModule,

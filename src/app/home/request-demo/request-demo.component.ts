@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
-// import { ValueTransformer } from '@angular/compiler/src/util';
 import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -32,11 +31,7 @@ export class RequestDemoComponent implements OnInit {
   SecBox: Array<any> = [];
 
   constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router,private spinner: NgxSpinnerService,private alertService: AlertService) {
-    // this.spinnerName='sp2';
-    // this.spinnerType='ball-fussion';
-
-   
-    
+ 
     this.form = this.fb.group({
       checkFirstArray: this.fb.array([]),
       checkFirstOther:null,
@@ -49,21 +44,15 @@ export class RequestDemoComponent implements OnInit {
       checkSevenbox: null,
       checkEightbox: null,
       checkNinebox: null
-    })
+    });
   }
   ngOnInit(): void {
-    
-      // this.spinner.show();
-      // window.setTimeout(() => {
-      //   this.spinner.hide();
-      // }, 3000);
-     
     
     this.dataService.fetch_req_demo().subscribe((res)=>{
       // this.spinner.hide()
       this.FirstBox=res.goalData;
       this.SecBox=res.strategyData;
-    })
+    });
   }
 
   //1st box
@@ -111,25 +100,12 @@ export class RequestDemoComponent implements OnInit {
     this.errorBol=false;
     this.firstBol = false;
     this.secBol = true;
-    // var first_box = <HTMLFormElement>document.getElementById('first_side');
-    // first_box.style.display='none';
-
-    // var sec_box = <HTMLFormElement>document.getElementById('sec_side');
-    // sec_box.style.display='block';
-
   }
-
-
-
-  
-
   //2nd box
   onSecCheckboxChange(e) {
     const checkSecArray: FormArray = this.form.get('checkSecArray') as FormArray;
   
     if (e.target.checked) {
-
-      // this.form.value.checkSecArray.push(e.target.value);
       checkSecArray.push(new FormControl(e.target.value));
     } else {
       let i: number = 0;

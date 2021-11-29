@@ -10,6 +10,8 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CookiePageComponent } from './cookie-page/cookie-page.component';
+import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 // import { NotFoundComponent } from './not-found/not-found.component';
  
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'projects', component: OurProjectsComponent },
   { path: 'clients', component: OurClientsComponent },
   { path: 'contact-us', component: ContactUsComponent },
+  { path: 'cookie', component: CookiePageComponent },
+  { path: 'privacy', component: PrivacyPageComponent },
 
 ];
 

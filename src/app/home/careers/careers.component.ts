@@ -40,9 +40,10 @@ export class CareersComponent implements OnInit {
   
   applydata(applyForm){
     this.dataService.postApplyForm(applyForm.name,applyForm.phone,applyForm.email,applyForm.applyfor,applyForm.experience,applyForm.message,this.image).subscribe((res)=>{
+       this.router.navigate(['/']);
       this.alertService.success(res.msg);
       });
-    // this.router.navigate(['/careers']);
+   
   }
   
 
