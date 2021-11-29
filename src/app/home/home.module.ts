@@ -26,6 +26,7 @@ import { AlertModule } from 'ngx-alerts';
 import { BrowserModule } from '@angular/platform-browser';
 import { CookiePageComponent } from './cookie-page/cookie-page.component';
 import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
+import { TermsPageComponent } from './terms-page/terms-page.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
     OurClientsComponent,
     ContactUsComponent,
     CookiePageComponent,
-    PrivacyPageComponent, 
+    PrivacyPageComponent,
+    TermsPageComponent, 
   ],
   imports: [
     CommonModule,
