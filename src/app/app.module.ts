@@ -9,23 +9,23 @@ import { HomeModule } from './home/home.module';
 import { SolutionModule } from './solution/solution.module';
 import { ProductsModule } from './products/products.module';
 const routes: Routes = [
-  { path: '', component: AppComponent },//
+  { path: '', component: AppComponent }
 ];
-   
+
 @NgModule({
   imports:
-      [   BrowserModule, 
-        RouterModule.forRoot(routes,{ useHash: true }),//
-        AppRoutingModule,
-        HomeModule,
-        SlickCarouselModule,
-        SolutionModule,
-        HttpClientModule,
-        ProductsModule,
-       ],
-  declarations: [ AppComponent ],
+    [BrowserModule,
+      RouterModule.forRoot(routes, { useHash: true }),//
+      AppRoutingModule,
+      HomeModule,
+      SlickCarouselModule,
+      SolutionModule,
+      HttpClientModule,
+      ProductsModule
+    ],
+  declarations: [AppComponent],
   providers: [],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 

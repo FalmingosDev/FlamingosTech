@@ -15,7 +15,7 @@
                 <div class="contact-btn">
                     <a routerLink="/contact-us" routerLinkActive="active" class="contact-a-tag">Contact Us</a>
                 </div>
-                <div class="menu-div" id="cssmenu">
+                <div class="menu-div " id="cssmenu">
               <ul>
                  <li ><a routerLink="/" >Home</a></li>
                  <li [routerLinkActive]="['active']"><a routerLink="/about" >About Us</a></li>
@@ -50,6 +50,68 @@
                  <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>  
               </ul>
             </div>
+            <!-- mobile-device -->
+            <div class="mobile-device">
+
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+                  <a routerLink="/" routerLinkActive="active">
+                    <div class="span4 proj-div">Home</div>
+                  </a>
+                  <a routerLink="/about" [routerLinkActive]="['active']" >
+                    <div class="span4 proj-div">About Us</div>
+                  </a>
+                  <a routerLink="/services" [routerLinkActive]="['active']">
+                    <div class="span4 proj-div">Services</div>
+                  </a>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-expanded="false">
+                      Solution
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" routerLink="/cloud" routerLinkActive="['active']">Cloud based custom ERP & CRM Application</a>
+                      <a class="dropdown-item" routerLink="/cloud" routerLinkActive="['active']">E-Commerce Application</a>
+                      <a class="dropdown-item" routerLink="/ecommerce" routerLinkActive="['active']">Android & iOS Mobile App</a>
+                      <a class="dropdown-item" routerLink="/android-ios" routerLinkActive="['active']">Responsive Website with CMS</a>
+                      <a class="dropdown-item" routerLink="/digital-marketing" routerLinkActive="['active']">Digital Marketing</a>
+                      <a class="dropdown-item" routerLink="/data-management" routerLinkActive="['active']">Data Management</a>
+                    </div>
+                  </div>
+              
+                  <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                      aria-expanded="false">
+                      Products
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" routerLink="/out-of-home" [routerLinkActive]="['active']">Out of Home (OOH) Advertising Management Application</a>
+                      <a class="dropdown-item" routerLink="/ecom-manage" [routerLinkActive]="['active']">e-Commerce / Online Store Management Application</a>
+                      <a class="dropdown-item" routerLink="/st-retail" [routerLinkActive]="['active']">Standalone Retail Outlet (POS) Management System</a>
+                      <a class="dropdown-item" routerLink="/retail-chain" [routerLinkActive]="['active']">Retail Chain with Inventory Management System</a>
+                      <a class="dropdown-item" routerLink="/rms" [routerLinkActive]="['active']">Reservation Management System for Hotels with integrated Booking Engine</a>
+                      <a class="dropdown-item" routerLink="/property-management-system" [routerLinkActive]="['active']">Property Management System for the Hotels</a>
+                      <a class="dropdown-item" routerLink="/pos-management-system" [routerLinkActive]="['active']">POS Management System for stand alone Restaurant, Bar, Cafe, Salon, Spa
+                        etc.</a>
+                      <a class="dropdown-item" routerLink="/online-market-place" [routerLinkActive]="['active']" >Online Market Place</a>
+                      <a class="dropdown-item" routerLink="/online-market-place" [routerLinkActive]="['active']" >Online Examination Management System</a>
+                      <a class="dropdown-item" routerLink="/market-survey-management" [routerLinkActive]="['active']" >Market Survey Management with Analytical Reporting System</a>
+                      <a class="dropdown-item" routerLink="/fleet-employee-management" [routerLinkActive]="['active']" >Fleet / Employee Management System with Real Time Geo Location Tracking
+                        Facility</a>
+                      <a class="dropdown-item" routerLink="/turnkey-projects" [routerLinkActive]="['active']">Turnkey Project / Event Management Application with Accounting & Inventory
+                        Management System</a>
+                    </div>
+                  </div>
+                  <a routerLink="/projects" routerLinkActive="['active']">
+                    <div class="span4 proj-div">Projects</div>
+                  </a>
+                  <a routerLink="/clients" routerLinkActive="['active']">
+                    <div class="span4 proj-div">Clients</div>
+                  </a>
+                </div>
+                <span class="sidebar-span" (click)="openNav()" >&#9776;</span>
+              </div>
+             <!-- mobile-device -->
             </div>
         </div>
     </div>  

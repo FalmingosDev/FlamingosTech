@@ -14,4 +14,22 @@ export class ApiService {
   fetch_req_demo(){
     return this.httpClient.get<any>(this.baseUrl+ '/fetch_request_demo.php'); 
   }
+
+  postApplyForm(name,phone,email,applyfor,experience,message,image){
+
+    const applyformData: FormData = new FormData();
+
+    applyformData.append('name',name);
+    applyformData.append('phone',phone);
+    applyformData.append('email',email);
+    applyformData.append('applyfor',applyfor);
+    applyformData.append('experience',experience);
+
+    applyformData.append('message',message);
+    applyformData.append('img',image);
+    // console.log(FormData);
+
+      return this.httpClient.post<any>(this.baseUrl+'/applyform_submit.php',applyformData);
+
+  }
 }

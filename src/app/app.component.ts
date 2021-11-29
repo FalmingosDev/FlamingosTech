@@ -13,6 +13,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+
   
 @Component({
     selector: 'app-root',
@@ -30,5 +31,6 @@ export class AppComponent implements OnInit {
             }
             window.scrollTo(0, 0)
         });
+        
     }
 }

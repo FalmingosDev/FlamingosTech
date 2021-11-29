@@ -20,8 +20,10 @@ import { OurProjectsComponent } from './our-projects/our-projects.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AlertModule } from 'ngx-alerts';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -41,17 +43,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     OurServicesComponent,
     OurProjectsComponent,
     OurClientsComponent,
-    ContactUsComponent,
-
-    
-    
+    ContactUsComponent, 
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SlickCarouselModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AlertModule.forRoot({maxMessages: 5, timeout: 5000, positionX: 'right',positionY:'bottom'})
   ],
   exports:[
 	HeaderComponent,

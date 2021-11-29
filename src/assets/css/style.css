@@ -586,10 +586,10 @@ a:hover{
 .rating-logo {
     width: 15%;
     float: left;
-    margin: 33px 0px;
+    margin: 0px 0px;
 }
 .rating-div {
-    width: 82%;
+    width: 74%;
     float: left;
     margin-left: 3%;
 }

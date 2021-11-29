@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from '@ang
 // import { ValueTransformer } from '@angular/compiler/src/util';
 import { ApiService } from 'src/app/api.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { AlertService } from 'ngx-alerts';
 
 @Component({
   selector: 'app-request-demo',
@@ -23,11 +25,18 @@ export class RequestDemoComponent implements OnInit {
   errorBol:boolean=false;
   a_firstOther:any="";
 
+  spinnerType:string;
+  spinnerName:string;
   
   FirstBox: Array<any> = [];
   SecBox: Array<any> = [];
 
-  constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router) {
+  constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router,private spinner: NgxSpinnerService,private alertService: AlertService) {
+    // this.spinnerName='sp2';
+    // this.spinnerType='ball-fussion';
+
+   
+    
     this.form = this.fb.group({
       checkFirstArray: this.fb.array([]),
       checkFirstOther:null,
@@ -43,8 +52,15 @@ export class RequestDemoComponent implements OnInit {
     })
   }
   ngOnInit(): void {
-    // this.sec_box.style.display='none';
+    
+      // this.spinner.show();
+      // window.setTimeout(() => {
+      //   this.spinner.hide();
+      // }, 3000);
+     
+    
     this.dataService.fetch_req_demo().subscribe((res)=>{
+      // this.spinner.hide()
       this.FirstBox=res.goalData;
       this.SecBox=res.strategyData;
     })
@@ -269,6 +285,7 @@ export class RequestDemoComponent implements OnInit {
   }
   onSubmit(e){
     e.preventDefault();
+    this.spinner.show();
     const inputElement = (<HTMLInputElement>document.getElementById("nine_box")).value;
     if(inputElement==""){
       this.errorBol=true;
@@ -277,8 +294,9 @@ export class RequestDemoComponent implements OnInit {
     this.errorBol=false;
     this.form.value.checkNinebox=inputElement;
     this.dataService.onRequestdemoSubmit(this.form.value).subscribe((res)=>{
+      this.spinner.hide();
       if(res.success){
-        alert(res.msg);
+        this.alertService.success('Your Request has been Submitted');
         this.router.navigate(['/']);
       }
     }); 
