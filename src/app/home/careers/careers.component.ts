@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertService } from 'ngx-alerts';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -12,7 +13,7 @@ import { ApiService } from 'src/app/api.service';
 export class CareersComponent implements OnInit {
   applyForm: FormGroup;
   image: File;
-  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService) { }
+  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.applyForm = new FormGroup({
@@ -28,9 +29,7 @@ export class CareersComponent implements OnInit {
 
   onPhotoUpload(event) {
     this.image=(<File>event.target.files[0]);
-    
   }
-
   get name() { return this.applyForm.get('name') }
   get phone() { return this.applyForm.get('phone') }
   get email() { return this.applyForm.get('email') }
@@ -39,12 +38,18 @@ export class CareersComponent implements OnInit {
   get message() { return this.applyForm.get('message') }
   
   applydata(applyForm){
+    this.spinner.show();
     this.dataService.postApplyForm(applyForm.name,applyForm.phone,applyForm.email,applyForm.applyfor,applyForm.experience,applyForm.message,this.image).subscribe((res)=>{
-       this.router.navigate(['/']);
+      this.spinner.hide();
       this.alertService.success(res.msg);
+      setTimeout(() => {
+        window.location.reload();
+      }, 100000); 
       });
    
   }
+
+  
   
 
 }
