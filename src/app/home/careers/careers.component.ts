@@ -44,7 +44,7 @@ export class CareersComponent implements OnInit {
       this.alertService.success(res.msg);
       setTimeout(() => {
         window.location.reload();
-      }, 100000); 
+      }, 1000); 
       });
    
   }
