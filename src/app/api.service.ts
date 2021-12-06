@@ -4,7 +4,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  baseUrl:string = "https://flamingostech.com/flamingostech_handler";
+  baseUrl:string = "https://flamingostech.com/flamingostech_handler"; //in root
+  // baseUrl:string = "https://flamingostech.com/DEV/flamingostech/flamingostech_handler"; //in DEV
 
   constructor(private httpClient : HttpClient) { }
   onRequestdemoSubmit(form){
@@ -16,20 +17,14 @@ export class ApiService {
   }
 
   postApplyForm(name,phone,email,applyfor,experience,message,image){
-
     const applyformData: FormData = new FormData();
-
     applyformData.append('name',name);
     applyformData.append('phone',phone);
     applyformData.append('email',email);
     applyformData.append('applyfor',applyfor);
     applyformData.append('experience',experience);
-
     applyformData.append('message',message);
     applyformData.append('img',image);
-    // console.log(FormData);
-
-      return this.httpClient.post<any>(this.baseUrl+'/applyform_submit.php',applyformData);
-
+    return this.httpClient.post<any>(this.baseUrl+'/applyform_submit.php',applyformData);
   }
 }

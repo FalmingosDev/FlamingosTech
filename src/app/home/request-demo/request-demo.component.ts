@@ -49,7 +49,6 @@ export class RequestDemoComponent implements OnInit {
   ngOnInit(): void {
     
     this.dataService.fetch_req_demo().subscribe((res)=>{
-      // this.spinner.hide()
       this.FirstBox=res.goalData;
       this.SecBox=res.strategyData;
     });
@@ -132,7 +131,6 @@ export class RequestDemoComponent implements OnInit {
     }
   }
   side_prev_2(): void {
-
     this.firstBol = true;
     this.secBol = false;
   }
@@ -222,7 +220,6 @@ export class RequestDemoComponent implements OnInit {
     this.sixthBol = true;
   }
   side_next_7() {
-   
     const inputElement = (<HTMLInputElement>document.getElementById("seven_box")).value;
     if(inputElement==""){
       this.errorBol=true;
@@ -239,7 +236,6 @@ export class RequestDemoComponent implements OnInit {
   side_prev_8(): void {
     this.eightBol = false;
     this.sevBol = true;
-
   }
   side_next_8(): void {
     const inputElement = (<HTMLInputElement>document.getElementById("eight_box")).value;

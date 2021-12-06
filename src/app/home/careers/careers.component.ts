@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AlertService } from 'ngx-alerts';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from 'src/app/api.service';
-
+import * as $ from 'node_modules/jquery'
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
@@ -41,7 +41,7 @@ export class CareersComponent implements OnInit {
     this.spinner.show();
     this.dataService.postApplyForm(applyForm.name,applyForm.phone,applyForm.email,applyForm.applyfor,applyForm.experience,applyForm.message,this.image).subscribe((res)=>{
       this.spinner.hide();
-      this.alertService.success(res.msg);
+      alert(res.msg);
       setTimeout(() => {
         window.location.reload();
       }, 1000); 
