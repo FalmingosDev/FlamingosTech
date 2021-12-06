@@ -2,3 +2,13 @@ input[type="checkbox"] {
     width: 17px;
     height: 17px;
 }
+.div-check-100{
+    width: 100% !important;
+}
+.form-ch-bt{
+    margin-bottom: 10px;
+}
+.oth-input {
+    border: none;
+    position: inherit;
+}

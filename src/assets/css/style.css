@@ -11,15 +11,23 @@ body{
     font-weight: 200;
     font-style: normal;
 }
-
+:focus-visible{
+    border: none;
+}
 a:hover{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .desktop-device{
     display: block;
 }
 .mobile-device{
     display: none;
+}
+.form-check {
+    position: relative;
+    display: block;
+    /* padding-left: 1.25rem; */
+    padding-left: 33px !important;
 }
 /******************header****************/
 .header{
@@ -56,7 +64,7 @@ a:hover{
     letter-spacing: 1px;
     padding-left: 17px;
 }
-.logo a {
+.logo {
     position: relative;
 }
 .contact-btn{
@@ -560,7 +568,7 @@ a:hover{
     height: 32px;
     border-radius: 100%;
     border: 1px solid #ccc;
-    line-height: 26px;
+    line-height: 27px;
     text-align: center;
     transition: all .5s ease;
 } 
@@ -578,10 +586,10 @@ a:hover{
 .rating-logo {
     width: 15%;
     float: left;
-    margin: 33px 0px;
+    margin: 0px 0px;
 }
 .rating-div {
-    width: 82%;
+    width: 74%;
     float: left;
     margin-left: 3%;
 }
@@ -615,7 +623,7 @@ a:hover{
     background: #009fb5;
     display: inline-block;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 13px;
     color: #fff;
 }
 .rating-ul p{
@@ -730,9 +738,10 @@ a:hover{
 .stp-btn-2{
     width: 30%;
     float: left;
+    display: none;
 }
 .stp-btn-3{
-    width: 35%;
+    width: 65%;
     float: left;
     text-align: right;
 }
@@ -838,6 +847,12 @@ a:hover{
 }
 }
 @media(max-width :767px){
+    .rq-div {
+        width: 100%;
+    }
+    .rq-demo {
+        margin-top: 15px;
+    }
     .desktop-device{
     display: none;
 }

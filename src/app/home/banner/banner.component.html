@@ -4,88 +4,31 @@
             <div class="col-md-7">
                 <div class="banner-text">
                     <h1>Provide <span>Business Solutions</span><br>&amp; Develop Software</h1>
-
-
                     <div class="text-slide">
-                        <!-- <li><p>Cloud based custom <span>ERP & CRM</span> Application</p></li>
-                      <li><p><span>E-Commerce</span> Application</p></li>
-                      <li><p><span>Android & iOS</span> Mobile App</p></li>
-                      <li><p><span>Responsive</span> Website with CMS</p></li>
-                      <li><p><span>Digital</span> Marketing</p></li> -->
                         <ul>
-                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                            (init)="slickInit($event)" (breakpoint)="breakpoint($event)"
-                            (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-
-                            <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
-                                <li style="list-style: none;">
-                                    <p [innerHTML]="slide.text"></p>
-                                </li>
-
-                            </div>
-                        </ngx-slick-carousel>
+                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                                <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
+                                    <li style="list-style: none;">
+                                        <p [innerHTML]="slide.text"></p>
+                                    </li>
+                                </div>
+                            </ngx-slick-carousel>
                         </ul>
-
-                      
                     </div>
-
-
-
-                    <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-                        (beforeChange)="beforeChange($event)">
-                        <div ngxSlickItem *ngFor="let slide of slideImg" class="slide">
-                            <img src="{{ slide.img }}" alt="" width="100%">
-                        </div>
-                        
-                    </ngx-slick-carousel> -->
-
-
-                    <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                        (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-                        (beforeChange)="beforeChange($event)">
-                       
-                        <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
-                            <li>{{ slide.text }}</li>
-                            
-                        </div>
-                    </ngx-slick-carousel> -->
-
-
-
-
-
                     <div class="contact-btn2">
-                        <a href="#" class="contact-a-tag">Contact Us</a>
+                        <a routerLink="/contact-us" routerLinkActive="active" class="contact-a-tag">Contact Us</a>
                     </div>
                 </div>
-
-
             </div>
-
-
-
             <div class="col-md-5">
                 <ul class="bxslider">
-                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-                    (beforeChange)="beforeChange($event)">
-                    <div ngxSlickItem *ngFor="let slide of slideImg" class="slide">
-                        <img [src]="slide.img" alt="" width="100%">
-                    </div>
-
-                </ngx-slick-carousel>
-                
-                   
-
-
-
-
+                    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                        <div ngxSlickItem *ngFor="let slide of slideImg" class="slide">
+                            <img [src]="slide.img" alt="" width="100%">
+                        </div>
+                    </ngx-slick-carousel>
                 </ul>
             </div>
-
-
-
         </div>
     </div>
 </section>

@@ -58,12 +58,14 @@
 
       });
   };
-})(jQuery);
+})($);
 
 (function($){
 $(document).ready(function(){
 
-$(document).ready(function() {
+
+  $(document).ready(function() {
+
   $("#cssmenu").menumaker({
     title: "",
     format: "multitoggle"

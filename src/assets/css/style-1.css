@@ -74,8 +74,7 @@
     font-size: 17px;
     padding: 0 7px;
 }
-.
-          .our_technology {
+.our_technology {
     margin-top: 50px;
 }
           .our_technology h3 {
@@ -497,4 +496,10 @@ section.content.site_quick_cta .button-wrap a {
 }
 .light_bg {
     background: #f2f2f2;
+}
+.privacy-text p{
+    color: #545454;
+    font-size: 21px;
+    font-weight: 900;
+    text-align:center;
 }

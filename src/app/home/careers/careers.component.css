@@ -1,0 +1,55 @@
+.input-block {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: .3s;
+}
+.input-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: Muli, monospace;
+    font-weight: 300;
+    letter-spacing: .7px;
+    color:#269fb5;
+    transition: .3s;
+}
+.input-block input, .input-block textarea {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    padding: 4px 0 0;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.modal-title {
+    font-size: 21px;
+    line-height: 30px;
+    margin: 0 0 20px;
+    font-weight: 400;
+    color: #009fb5;
+}
+.modal-left p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+.input-button {
+    padding: 8px 12px;
+    display: block;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    background: #009fb5;
+    font-family: 'Open Sans', sans-serif;
+    transition: .3s;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
