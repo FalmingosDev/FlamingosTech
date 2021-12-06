@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiService {
-  baseUrl:string = "https://flamingostech.com/flamingostech_handler"; //in root
-  // baseUrl:string = "https://flamingostech.com/DEV/flamingostech/flamingostech_handler"; //in DEV
+  // baseUrl:string = "https://flamingostech.com/flamingostech_handler"; //for root
+  baseUrl:string = "https://dev.flamingostech.com/flamingostech_handler"; //for dev
 
   constructor(private httpClient : HttpClient) { }
   onRequestdemoSubmit(form){
