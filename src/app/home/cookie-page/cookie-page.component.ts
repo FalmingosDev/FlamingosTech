@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-cookie-page',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CookiePageComponent implements OnInit {
 
-  constructor() { }
+  title = 'Cookies';
+
+  constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.title);
+    
+    this.meta.updateTag({name: 'keywords', content: 'This is the Cookies Page'});
+    this.meta.updateTag({name: 'description', content: 'This is the Cookies Page Description'});
   }
+  
 
 }

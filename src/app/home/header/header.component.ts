@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 //  import * as $ from 'jquery';
 //  import* as hcOffcanvasNav from 'hc-offcanvas-nav';
 @Component({
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   
+  @Output() setPageMeta = new EventEmitter(); 
+  
+
   constructor() { }
 
   ngOnInit(): void {}
@@ -17,6 +20,10 @@ export class HeaderComponent implements OnInit {
 
    closeNav() {
     (<HTMLElement>document.getElementById("mySidenav")).style.width = "0";
+  }
+
+  setMeta(){
+    this.setPageMeta.emit();
   }
 
 }

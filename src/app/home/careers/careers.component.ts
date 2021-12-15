@@ -5,6 +5,9 @@ import { AlertService } from 'ngx-alerts';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from 'src/app/api.service';
 import * as $ from 'node_modules/jquery'
+
+import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
@@ -13,9 +16,16 @@ import * as $ from 'node_modules/jquery'
 export class CareersComponent implements OnInit {
   applyForm: FormGroup;
   image: File;
-  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService) { }
+  title = 'Careers';
+  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService,private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle(this.title);
+
+    this.meta.updateTag({name: 'keywords', content: 'This is the Career Page'});
+    this.meta.updateTag({name: 'description', content: 'This is the Career Page Description'});
+
     this.applyForm = new FormGroup({
       name : new FormControl('', Validators.required),
       phone : new FormControl('', Validators.required),
@@ -36,20 +46,50 @@ export class CareersComponent implements OnInit {
   get applyfor() { return this.applyForm.get('applyfor') }
   get experience() { return this.applyForm.get('experience') }
   get message() { return this.applyForm.get('message') }
-  
-  applydata(applyForm){
-    this.spinner.show();
-    this.dataService.postApplyForm(applyForm.name,applyForm.phone,applyForm.email,applyForm.applyfor,applyForm.experience,applyForm.message,this.image).subscribe((res)=>{
-      this.spinner.hide();
-      alert(res.msg);
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000); 
-      });
-   
-  }
+  get image_file() { return this.applyForm.get('image_file') }
 
   
+  applydata(applyForm){
+    if (this.name.status == 'INVALID') {
+      alert('Please Enter Your Name');
+      $('#name').focus();
+    }
+    else if (this.phone.status == 'INVALID') {
+      alert('Please Enter Your Phone Number');
+      $('#phone').focus();
+    }
+    else if (this.email.status == 'INVALID') {
+      alert('Please Enter Your Email');
+      $('#email').focus();
+    }
+    else if (this.applyfor.status == 'INVALID') {
+      alert('Please Enter the position you are applying for');
+      $('#applyfor').focus();
+    }
+    else if (this.experience.status == 'INVALID') {
+      alert('Please Enter your total experience');
+      $('#experience').focus();
+    }
+    else if (this.image_file.status == 'INVALID') {
+      alert('Please upload your updated resume');
+      $('#image_file').focus();
+    }
+    else if (this.message.status == 'INVALID') {
+      alert('Please Write Something About You');
+      $('#message').focus();
+    }
+    else{
+      this.spinner.show();
+      this.dataService.postApplyForm(applyForm.name,applyForm.phone,applyForm.email,applyForm.applyfor,applyForm.experience,applyForm.message,this.image).subscribe((res)=>{
+        this.spinner.hide();
+        alert(res.msg);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000); 
+        });
+    }
+   
+  }
   
 
 }

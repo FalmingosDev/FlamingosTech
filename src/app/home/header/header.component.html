@@ -3,7 +3,9 @@
         <div class="row">
             <div class="col-lg-2 col-md-3"> 
                 <div class="logo">
+                    <!-- <a routerLink="/" routerLinkActive="active" (click)="setMeta()"> -->
                     <a routerLink="/" routerLinkActive="active">
+
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 89.2 174.1" enable-background="new 0 0 89.2 174.1" xml:space="preserve">
                     <path fill="#009FB5" d="M0,160.2V38.3c0,0,1.9-12.1,10.5-21.1C19.1,8.3,31.6-0.7,55.2,0c36.6,1.1,33.9,26.3,33.9,26.3 s-9.9-9.4-23.7-1.2S34.4,39.2,34.7,50.1c0.3,10.8,9.9,13.8,9.9,13.8s1-15,8.9-16.9c5.1-1.2,12.3,0.1,16.4,2.8 c2.9,1.9,6.5,1.6,7.5-0.6c1-2.5,4.5-2.8,4.4-0.1c-0.1,5,3.4,26.9-16.8,27.2c-20.4,0.3-25.3,0.6-25.3,0.6v95.9 C39.7,172.7,5,180.3,0,160.2z M59.8,30.4c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C63.8,32.2,62,30.4,59.8,30.4z"></path> </svg>
                        <h1>Flamingos<span>Tech</span></h1>
@@ -17,7 +19,9 @@
                 </div>
                 <div class="menu-div " id="cssmenu">
               <ul>
-                 <li ><a routerLink="/" >Home</a></li>
+                 <!-- <li ><a routerLink="/" (click)="setMeta()">Home</a></li> -->
+                 <li ><a routerLink="/">Home</a></li>
+
                  <li [routerLinkActive]="['active']"><a routerLink="/about" >About Us</a></li>
                  <li [routerLinkActive]="['active']"><a routerLink="/services" >Services</a></li>
                  <li [routerLinkActive]="['active']"><a href="javascript:void(0);">Solution <i class="fa fa-angle-down"></i></a>
