@@ -15,12 +15,12 @@ export class BannerComponent implements OnInit {
     "autoplaySpeed": 1500
   };
   slideImg = [
-    { img: "assets/images/banner_bg1.jpg" },
-    { img: "assets/images/banner_bg2.jpg" },
-    { img: "assets/images/banner_bg3.jpg" },
-    { img: "assets/images/banner_bg4.jpg" },
-    { img: "assets/images/banner_bg5.jpg" },
-    { img: "assets/images/banner_bg6.jpg" }
+    { img: "assets/images/banner_bg1.png" },
+    { img: "assets/images/banner_bg2.png" },
+    { img: "assets/images/banner_bg3.png" },
+    { img: "assets/images/banner_bg4.png" },
+    { img: "assets/images/banner_bg5.png" },
+    { img: "assets/images/banner_bg6.png" }
   ];
   slidetext = [
     { text: `Cloud based custom <span>ERP & CRM</span> Application` },

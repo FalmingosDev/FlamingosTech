@@ -27,6 +27,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CookiePageComponent } from './cookie-page/cookie-page.component';
 import { PrivacyPageComponent } from './privacy-page/privacy-page.component';
 import { TermsPageComponent } from './terms-page/terms-page.component';
+import { AboutHmComponent } from './about-hm/about-hm.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { TermsPageComponent } from './terms-page/terms-page.component';
     ContactUsComponent,
     CookiePageComponent,
     PrivacyPageComponent,
-    TermsPageComponent, 
+    TermsPageComponent,
+    AboutHmComponent, 
   ],
   imports: [
     CommonModule,

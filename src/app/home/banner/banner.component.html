@@ -1,23 +1,68 @@
-<section class="banner">
+<section class="banner desktop-device">
+    <div class="banner-bg-div"> 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 p-0">
+                    <img src="assets/images/banner-bg.png" class="img-fluid">  
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="banner-content-div">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="banner-text">
+                        <h1>Provide <span>Business Solutions</span><br>&amp; Develop Software</h1>
+                        <div class="text-slide">
+                            <ul>
+                                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                                    <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
+                                        <li style="list-style: none;">
+                                            <p [innerHTML]="slide.text"></p>
+                                        </li>
+                                    </div>
+                                </ngx-slick-carousel>
+                            </ul>
+                        </div>
+                        <div class="contact-btn2">
+                            <a routerLink="/contact-us" routerLinkActive="active" class="contact-a-tag">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <ul class="bxslider">
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                            <div ngxSlickItem *ngFor="let slide of slideImg" class="slide">
+                                <img [src]="slide.img" alt="" width="100%">
+                            </div>
+                        </ngx-slick-carousel>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<section class="banner mobile-device bn-bg-bk">
     <div class="container">
         <div class="row">
             <div class="col-md-7">
                 <div class="banner-text">
-                    <h1>Provide <span>Business Solutions</span><br>&amp; Develop Software</h1>
-                    <div class="text-slide">
-                        <ul>
-                            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-                                <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
-                                    <li style="list-style: none;">
-                                        <p [innerHTML]="slide.text"></p>
-                                    </li>
-                                </div>
-                            </ngx-slick-carousel>
-                        </ul>
-                    </div>
+                  <h1>Provide <span>Business Solutions</span><br>&amp; Develop Software</h1> 
+                  <div class="text-slide">
+                    <ul>
+                        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                            <div ngxSlickItem *ngFor="let slide of slidetext" class="slide">
+                                <li style="list-style: none;">
+                                    <p [innerHTML]="slide.text"></p>
+                                </li>
+                            </div>
+                        </ngx-slick-carousel>
+                    </ul>
+                </div>
                     <div class="contact-btn2">
                         <a routerLink="/contact-us" routerLinkActive="active" class="contact-a-tag">Contact Us</a>
-                    </div>
+                    </div>  
                 </div>
             </div>
             <div class="col-md-5">
@@ -30,5 +75,5 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>  
 </section>

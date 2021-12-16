@@ -32,6 +32,9 @@
 /*  float: left;*/
   margin-top: 0px;
 }
+#cssmenu > ul > li > a.active{
+    border: 1px solid #000;
+}
 #menu-line {
   position: absolute;
   top: 0;
@@ -69,7 +72,7 @@
     /* font-size: 14px; */
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     color: #000;
     /* font-weight: 700; */
     -webkit-transition: color .2s ease;
@@ -80,10 +83,28 @@
     font-family: Muli, monospace;
     font-size: 13px;
     color: #000;
+    font-weight: bold;
+}
+#cssmenu > ul > li > a:hover{
+    padding: 25px 29px;
+    /* font-size: 14px; */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #009fb5;     
+    /* font-weight: 700; */
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+    font-family: Muli, monospace;
+    font-size: 13px;
+    color: #009fb5;
 }
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li.active > a {
-  color: #000000;
+  color: #009fb5;
   border-bottom: 2px solid #009fb5  !important;
 }
 #cssmenu > ul > li.has-sub > a {
