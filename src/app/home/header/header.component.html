@@ -2,7 +2,7 @@
   <div class="top-style2 clearfix">
       <div class="top-style2-left">
           <ul>
-              <li><a href="tel:+91 33 4604 9795">+91 33 4604 9795</a> / <a href="tel:9830267481">9830267481</a></li>
+              <li><a href="tel:+91 33 4604 9795">+91 33 4604 9795</a> / <a href="tel:9830267481">9830267481</a> / <a href="tel:9831129006">9831129006</a></li>
               <li><a href="mailto:devops@flamingostech.com">devops@flamingostech.com</a></li>
 
           </ul>
@@ -49,7 +49,7 @@
                     <li><a routerLink="/data-management" routerLinkActive="active">Data Management</a></li>
                   </ul>
                  </li>                     
-                 <li><a href="javascript:void(0);">Products <i class="fa fa-angle-down"></i></a>
+                 <li [routerLinkActive]="['active']"><a href="javascript:void(0);">Products <i class="fa fa-angle-down"></i></a>
                   <ul>
                     <li><a routerLink="/out-of-home" routerLinkActive="active">Out of Home (OOH) Advertising Management Application</a></li>
                     <li><a routerLink="/ecom-manage" routerLinkActive="active">e-Commerce / Online Store Management Application</a></li>
@@ -65,8 +65,8 @@
                     <li><a routerLink="/turnkey-projects" routerLinkActive="active">Turnkey Project / Event Management Application with Accounting & Inventory Management System</a></li>  
                   </ul>
                  </li> 
-                 <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-                 <li><a routerLink="/clients" routerLinkActive="active">Clients</a></li>  
+                 <li [routerLinkActive]="['active']"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+                 <li [routerLinkActive]="['active']"><a routerLink="/clients" routerLinkActive="active">Clients</a></li>  
               </ul>
             </div>
             <!-- mobile-device -->

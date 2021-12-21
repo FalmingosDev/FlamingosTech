@@ -32,9 +32,9 @@
 /*  float: left;*/
   margin-top: 0px;
 }
-#cssmenu > ul > li > a.active{
+/* #cssmenu > ul > li > a.active{
     border: 1px solid #000;
-}
+} */
 #menu-line {
   position: absolute;
   top: 0;
