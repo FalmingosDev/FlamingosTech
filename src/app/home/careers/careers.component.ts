@@ -4,7 +4,10 @@ import { Router } from '@angular/router';
 import { AlertService } from 'ngx-alerts';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiService } from 'src/app/api.service';
-import * as $ from 'node_modules/jquery'
+import * as $ from 'node_modules/jquery';
+
+import { Title, Meta } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-careers',
   templateUrl: './careers.component.html',
@@ -13,9 +16,16 @@ import * as $ from 'node_modules/jquery'
 export class CareersComponent implements OnInit {
   applyForm: FormGroup;
   image: File;
-  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService) { }
+  title = 'FlamingosTech | Kolkata IT Company |Careers';
+  constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService,private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
+
+    this.titleService.setTitle(this.title);
+
+    this.meta.updateTag({name: 'keywords', content: 'This is the Career Page'});
+    this.meta.updateTag({name: 'description', content: 'This is the Career Page Description'});
+
     this.applyForm = new FormGroup({
       name : new FormControl('', Validators.required),
       phone : new FormControl('', Validators.required),

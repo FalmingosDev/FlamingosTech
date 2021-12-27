@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { AlertService } from 'ngx-alerts';
 
+import { Title, Meta } from '@angular/platform-browser';
+
+
 @Component({
   selector: 'app-request-demo',
   templateUrl: './request-demo.component.html',
@@ -30,7 +33,9 @@ export class RequestDemoComponent implements OnInit {
   FirstBox: Array<any> = [];
   SecBox: Array<any> = [];
 
-  constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router,private spinner: NgxSpinnerService,private alertService: AlertService) {
+  title = 'FlamingosTech | Kolkata IT Company |Request Demo';
+
+  constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router,private spinner: NgxSpinnerService,private alertService: AlertService,private titleService: Title, private meta: Meta) {
  
     this.form = this.fb.group({
       checkFirstArray: this.fb.array([]),
@@ -47,6 +52,11 @@ export class RequestDemoComponent implements OnInit {
     });
   }
   ngOnInit(): void {
+
+    this.titleService.setTitle(this.title);
+    
+    this.meta.updateTag({name: 'keywords', content: 'This is the Request Demo Page'});
+    this.meta.updateTag({name: 'description', content: 'This is the Request Demo Page Description'});
     
     this.dataService.fetch_req_demo().subscribe((res)=>{
       this.FirstBox=res.goalData;
