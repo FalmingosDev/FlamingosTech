@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class OnlineMarketComponent implements OnInit {
 
-  title = 'Online Market';
+  title = 'FlamingosTech- Online Market Place';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

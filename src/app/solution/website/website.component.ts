@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class WebsiteComponent implements OnInit {
 
-  title = 'Responsive Website with CMS';
+  title = 'FlamingosTech- Responsive Website with CMS';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

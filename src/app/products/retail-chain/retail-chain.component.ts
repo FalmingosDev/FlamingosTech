@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class RetailChainComponent implements OnInit {
 
-  title = 'Retail Chain with Inventory Management System';
+  title = 'FlamingosTech- Retail Chain with Inventory Management System';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

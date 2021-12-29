@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class PrivacyPageComponent implements OnInit {
 
-  title = 'FlamingosTech | Kolkata IT Company |Privacy';
+  title = 'FlamingosTech- Privacy Policy';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

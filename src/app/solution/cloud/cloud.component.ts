@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class CloudComponent implements OnInit {
 
-  title = 'Cloud Based Custom ERP & CRM Application';
+  title = 'FlamingosTech- Cloud Based Custom ERP & CRM Application';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class MarketSurveyComponent implements OnInit {
 
-  title = 'Market Survey';
+  title = 'FlamingosTech- Market Survey Management with Analytical Reporting System';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

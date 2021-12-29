@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class DigitalMarketingComponent implements OnInit {
 
-  title = 'Digital Marketing';
+  title = 'FlamingosTech- Digital Marketing';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

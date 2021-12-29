@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class StRetailComponent implements OnInit {
 
-  title = 'Standalone Retail Outlet Management System';
+  title = 'FlamingosTech- Standalone Retail Outlet (POS) Management System';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

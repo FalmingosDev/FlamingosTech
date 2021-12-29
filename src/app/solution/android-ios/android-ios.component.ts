@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class AndroidIosComponent implements OnInit {
 
-  title = 'Android & iOS Mobile App';
+  title = 'FlamingosTech- Android & iOS Mobile App';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

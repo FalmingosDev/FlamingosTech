@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class PmsComponent implements OnInit {
 
-  title = 'Property Management System';
+  title = 'FlamingosTech- Property Management System for the Hotels';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

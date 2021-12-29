@@ -16,7 +16,7 @@ import { Title, Meta } from '@angular/platform-browser';
 export class CareersComponent implements OnInit {
   applyForm: FormGroup;
   image: File;
-  title = 'FlamingosTech | Kolkata IT Company |Careers';
+  title = 'FlamingosTech- Kolkata IT Company- Careers';
   constructor(private dataService:ApiService,private router:Router,private alertService: AlertService,private spinner: NgxSpinnerService,private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {

@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class EcomManageComponent implements OnInit {
 
-  title = 'Ecommerce / Online Store Management Application';
+  title = 'FlamingosTech- Ecommerce / Online Store Management Application';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

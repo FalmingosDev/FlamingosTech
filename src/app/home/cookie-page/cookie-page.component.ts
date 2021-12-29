@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class CookiePageComponent implements OnInit {
 
-  title = 'FlamingosTech | Kolkata IT Company |Cookies';
+  title = 'FlamingosTech- Cookie Policy';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

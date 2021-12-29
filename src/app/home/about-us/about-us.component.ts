@@ -10,7 +10,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class AboutUsComponent implements OnInit {
 
-  title = 'FlamingosTech | Kolkata IT Company | About Us';
+  title = 'FlamingosTech- Kolkata IT Company- About Us';
   constructor(private titleService: Title, private meta: Meta) { }
   // constructor() { }
 

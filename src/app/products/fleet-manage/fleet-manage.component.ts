@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class FleetManageComponent implements OnInit {
 
-  title = 'Employee Management System';
+  title = 'FlamingosTech- Fleet / Employee Management System with Real Time Geo Location Tracking Facility';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

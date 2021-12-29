@@ -33,7 +33,7 @@ export class RequestDemoComponent implements OnInit {
   FirstBox: Array<any> = [];
   SecBox: Array<any> = [];
 
-  title = 'FlamingosTech | Kolkata IT Company |Request Demo';
+  title = 'FlamingosTech- Request Demo';
 
   constructor(private fb: FormBuilder,private dataService:ApiService,private router:Router,private spinner: NgxSpinnerService,private alertService: AlertService,private titleService: Title, private meta: Meta) {
  

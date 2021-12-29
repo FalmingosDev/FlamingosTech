@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class OnlineExaminationComponent implements OnInit {
 
-  title = 'Online Examination';
+  title = 'FlamingosTech- Online Examination Management System';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

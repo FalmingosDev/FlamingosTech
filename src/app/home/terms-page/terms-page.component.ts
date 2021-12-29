@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TermsPageComponent implements OnInit {
 
-  title = 'FlamingosTech | Kolkata IT Company |Terms';
+  title = 'FlamingosTech- Terms of Use';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

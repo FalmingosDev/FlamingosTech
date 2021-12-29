@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class RmsComponent implements OnInit {
 
-  title = 'Reservation Management System';
+  title = 'FlamingosTech- Reservation Management System for Hotels with integrated Booking Engine';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

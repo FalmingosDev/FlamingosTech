@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class PosComponent implements OnInit {
 
-  title = 'POS Management System ';
+  title = 'FlamingosTech- POS Management System for stand alone Restaurant, Bar, Cafe, Salon, Spa etc. ';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

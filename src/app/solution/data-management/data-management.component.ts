@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class DataManagementComponent implements OnInit {
 
-  title = 'Data Management';
+  title = 'FlamingosTech- Data Management';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

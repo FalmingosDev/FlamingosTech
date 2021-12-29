@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class OohComponent implements OnInit {
 
-  title = 'Out Of Home Advertising Management Application';
+  title = 'FlamingosTech- Out Of Home Advertising Management Application';
 
   constructor(private titleService: Title, private meta: Meta) { }
 

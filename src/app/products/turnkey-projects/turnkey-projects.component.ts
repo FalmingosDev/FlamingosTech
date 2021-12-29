@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TurnkeyProjectsComponent implements OnInit {
 
-  title = 'Turnkey Project / Event Management Application ';
+  title = 'FlamingosTech- Turnkey Project / Event Management Application with Accounting & Inventory Management System ';
 
   constructor(private titleService: Title, private meta: Meta) { }
 
