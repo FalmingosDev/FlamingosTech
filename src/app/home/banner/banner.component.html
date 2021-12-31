@@ -34,7 +34,7 @@
                     <ul class="bxslider">
                         <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
                             <div ngxSlickItem *ngFor="let slide of slideImg" class="slide">
-                                <img [src]="slide.img" alt="" width="100%">
+                                <img [src]="slide.img" [alt]="slide.alt"  width="100%">
                             </div>
                         </ngx-slick-carousel>
                     </ul>
