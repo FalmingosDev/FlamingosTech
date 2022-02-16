@@ -9,15 +9,15 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class OohComponent implements OnInit {
 
-  title = 'FlamingosTech- Out Of Home Advertising Management Application';
+  title = 'FlamingosTech | Product ooh advertising in kolkata';
 
   constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
 
-    this.meta.updateTag({name: 'keywords', content: 'This is the Out Of Home Advertising Management Application Page'});
-    this.meta.updateTag({name: 'description', content: 'This is the Out Of Home Advertising Management Application Page Description'});
+    this.meta.updateTag({name: 'keywords', content: 'Ooh advertising in india Product ooh advertising in kolkata Kolkata ooh advertising Best kolkata product ooh advertising Indian Ooh advertising company'});
+    this.meta.updateTag({name: 'description', content: 'FlamingosTech offers OOH application services to clients based nationally'});
   }
 
 }

@@ -8,15 +8,15 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class MarketSurveyComponent implements OnInit {
 
-  title = 'FlamingosTech- Market Survey Management with Analytical Reporting System';
+  title = 'FlamingosTech | Market survey management kolkata';
 
   constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
 
-    this.meta.updateTag({name: 'keywords', content: 'This is the Market Survey Page'});
-    this.meta.updateTag({name: 'description', content: 'This is the Market Survey Page Description'});
+    this.meta.updateTag({name: 'keywords', content: 'Market survey management kolkata Market service management'});
+    this.meta.updateTag({name: 'description', content: 'Market survey management in kolkata by FlamingosTech'});
   }
 
 }

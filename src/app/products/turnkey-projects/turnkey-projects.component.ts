@@ -8,15 +8,15 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class TurnkeyProjectsComponent implements OnInit {
 
-  title = 'FlamingosTech- Turnkey Project / Event Management Application with Accounting & Inventory Management System ';
+  title = 'FlamingosTech | Turnkey projects in india ';
 
   constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
 
-    this.meta.updateTag({name: 'keywords', content: 'This is the Turnkey Project / Event Management Application Page'});
-    this.meta.updateTag({name: 'description', content: 'This is the Turnkey Project / Event Management Application Page Description'});
+    this.meta.updateTag({name: 'keywords', content: 'Upcoming turnkey projects in india Event management system application'});
+    this.meta.updateTag({name: 'description', content: 'Turnkey project application in India by FlamingosTech'});
   }
 
 }
