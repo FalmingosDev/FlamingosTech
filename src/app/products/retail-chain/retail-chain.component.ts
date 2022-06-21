@@ -9,15 +9,15 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class RetailChainComponent implements OnInit {
 
-  title = 'FlamingosTech- Retail Chain with Inventory Management System';
+  title = 'FlamingosTech | Retail chain with inventory management';
 
   constructor(private titleService: Title, private meta: Meta) { }
 
   ngOnInit(): void {
     this.titleService.setTitle(this.title);
 
-    this.meta.updateTag({name: 'keywords', content: 'This is the Retail Chain with Inventory Management System Page'});
-    this.meta.updateTag({name: 'description', content: 'This is the Retail Chain with Inventory Management System Page Description'});
+    this.meta.updateTag({name: 'keywords', content: 'Best pos software for retail stores in india Best billing software for Pos retail'});
+    this.meta.updateTag({name: 'description', content: 'FlamingosTech offers retail change with inventory management services.'});
   }
 
 }
